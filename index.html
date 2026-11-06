@@ -608,10 +608,9 @@ function toast(msg) {
 const dois = n => String(n).padStart(2, '0');
 const data = d => `${dois(d.getDate())}/${dois(d.getMonth() + 1)}/${d.getFullYear()}`;
 const hora = d => `${dois(d.getHours())}:${dois(d.getMinutes())}:${dois(d.getSeconds())}`;
-const hoje = new Date(), validade = new Date(hoje);
-validade.setFullYear(hoje.getFullYear() + 1);
+const validade = new Date(2027, 2, 6); // 06/03/2027 (mês 2 = março)
 $('validade').textContent = $('valValidade').textContent = data(validade);
-$('validadeCurta').textContent = `${dois(validade.getMonth() + 1)}/${validade.getFullYear()}`;
+$('validadeCurta').textContent = '03/2027';
 
 // curso em destaque
 let cursoAtual = 'excel';
