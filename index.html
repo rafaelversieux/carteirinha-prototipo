@@ -781,7 +781,7 @@ ajusta();
 addEventListener('resize', ajusta);
 
 escolheCurso(guarda.get('curso', 'excel'));
-mostraAviso(true);
+mostraAviso(false);
 tique();
 setInterval(tique, 1000);
 if (location.hash.startsWith('#validar=')) abreValidacao(decodeURIComponent(location.hash.slice(9)));
